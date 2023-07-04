@@ -17,6 +17,7 @@ RUN apk add -u \
 
 COPY ./composer.json /var/www/html/composer.json
 COPY ./src /var/www/html/src
+COPY ./tests /var/www/html/tests
 COPY ./ecs.php /var/www/html/ecs.php
 COPY ./phpstan.neon /var/www/html/phpstan.neon
 

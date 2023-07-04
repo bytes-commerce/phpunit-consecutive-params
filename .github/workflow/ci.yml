@@ -47,3 +47,6 @@ jobs:
 
       - name: "PhpStan for src"
         run: "vendor/bin/phpstan analyse --error-format=checkstyle src --level=8 | cs2pr"
+
+      - name: "PHPUnit Test"
+        run: "vendor/bin/phpunit tests/BaseTest.php"

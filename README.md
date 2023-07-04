@@ -51,7 +51,7 @@ Another example for automatic replacement in correctly formatted code:
 becomes
 
 ```php
-->with(...$this->consecutiveParams(
+->with(...$this->withConsecutive(
     ['a', 'b'],
     ['c', 'd'],
     ['e', 'f']
