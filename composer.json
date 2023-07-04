@@ -4,7 +4,7 @@
   "description": "Drop-in Trait to use removed ConsecutiveParams from PhpUnit",
   "keywords": ["phpunit","tdd","unit testing","variadic", "consecutive params"],
   "homepage": "https://github.com/nopenopenope/behat-test-runner",
-  "license": "GNU GPLv3",
+  "license": "GPL-3.0-or-later",
   "minimum-stability": "dev",
   "authors": [
     {
