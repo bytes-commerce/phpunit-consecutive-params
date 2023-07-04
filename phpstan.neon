@@ -1,0 +1,3 @@
+parameters:
+    parallel:
+        processTimeout: 15.0

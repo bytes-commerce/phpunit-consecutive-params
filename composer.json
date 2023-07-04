@@ -1,0 +1,30 @@
+{
+  "name": "seec/phpunit-consecutive-params",
+  "type": "library",
+  "description": "Drop-in Trait to use removed ConsecutiveParams from PhpUnit",
+  "keywords": ["phpunit","tdd","unit testing","variadic", "consecutive params"],
+  "homepage": "https://github.com/nopenopenope/behat-test-runner",
+  "license": "GNU GPLv3",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Maximilian Graf Schimmelmann",
+      "email": "max@schimmelmann.org",
+      "homepage": "https://www.schimmelmann.org",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php" : "^8.0"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^1.10",
+    "symplify/easy-coding-standard": "^11.3",
+    "phpunit/phpunit": "^9|^10"
+  },
+  "autoload": {
+    "psr-4": {
+      "SEEC\\PhpUnit\\Helper\\": "src"
+    }
+  }
+}

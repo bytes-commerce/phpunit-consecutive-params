@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    environment:
+      PHP_IDE_CONFIG: serverName=phpunit-consecutive-params
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./src:/var/www/html/src
+      - ./vendor:/var/www/html/vendor
+      - ./composer.json:/var/www/html/composer.json
