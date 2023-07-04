@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace SEEC\PhpUnit\Helper;
 
-use PHPUnit\Framework\TestCase;
 use function array_column;
 use function count;
 use PHPUnit\Framework\Constraint\Callback;
 use PHPUnit\Framework\Constraint\Constraint;
+use PHPUnit\Framework\TestCase;
 
 trait ConsecutiveParams
 {

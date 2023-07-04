@@ -6,7 +6,6 @@ namespace SEEC\PhpUnit\Helper\Tests;
 
 use PHPUnit\Framework\TestCase;
 use SEEC\PhpUnit\Helper\ConsecutiveParams;
-use stdClass;
 
 final class TestableClass
 {
