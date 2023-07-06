@@ -1,8 +1,13 @@
+[![Latest Stable Version](http://poser.pugx.org/seec/phpunit-consecutive-params/v)](https://packagist.org/packages/seec/phpunit-consecutive-params) [![Total Downloads](http://poser.pugx.org/seec/phpunit-consecutive-params/downloads)](https://packagist.org/packages/seec/phpunit-consecutive-params) [![Latest Unstable Version](http://poser.pugx.org/seec/phpunit-consecutive-params/v/unstable)](https://packagist.org/packages/seec/phpunit-consecutive-params) [![License](http://poser.pugx.org/seec/phpunit-consecutive-params/license)](https://packagist.org/packages/seec/phpunit-consecutive-params) [![PHP Version Require](http://poser.pugx.org/seec/phpunit-consecutive-params/require/php)](https://packagist.org/packages/seec/phpunit-consecutive-params)
+
 ### PHPUnit Consecutive Parameters
 
-After [PHPUnit has removed the possibility](https://github.com/sebastianbergmann/phpunit/issues/4026) to use `withConsecutive`, which was used by thousand of UnitTests, developers need a replacement which is not offered in a neat way at the moment.
+After [PHPUnit has removed the possibility](https://github.com/sebastianbergmann/phpunit/issues/4026) to
+use `withConsecutive`, which was used by thousand of UnitTests, developers need a replacement which is not offered in a
+neat way at the moment.
 
-Until this problem is solved directly in PHPUnit, this library offers a simple solution to use a replacement of `withConsecutive` again.
+Until this problem is solved directly in PHPUnit, this library offers a simple solution to use a replacement
+of `withConsecutive` again.
 
 ## Installation
 
@@ -40,6 +45,7 @@ final class TestRunnerContextTest extends TestCase
 ```
 
 Another example for automatic replacement in correctly formatted code:
+
 ```php 
 ->withConsecutive(
     ['a', 'b'],
