@@ -12,7 +12,7 @@ of `withConsecutive` again.
 ## Installation
 
 ```bash
-$ composer require --dev seec/phpunit-consecutive-parameters
+$ composer require --dev seec/phpunit-consecutive-params
 ```
 
 ## Usage
