@@ -7,7 +7,7 @@ use `withConsecutive`, which was used by thousand of UnitTests, developers need 
 neat way at the moment.
 
 Until this problem is solved directly in PHPUnit, this library offers a simple solution to use a replacement
-of `withConsecutive` again.
+of `withConsecutive` again. The original solution [posted here](https://github.com/sebastianbergmann/phpunit/issues/4026#issuecomment-1418205424).
 
 ## Installation
 
