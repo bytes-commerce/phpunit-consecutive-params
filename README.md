@@ -36,7 +36,7 @@ final class TestRunnerContextTest extends TestCase
         $mock = $this->createMock(\stdClass::class);
         $mock->expects($this->exactly(3))
             ->method('foo')
-            ->with(...$this->consecutiveParams(
+            ->with(...$this->withConsecutive(
                 ['a', 'b'],
                 ['c', 'd'],
                 ['e', 'f']
