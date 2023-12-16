@@ -12,6 +12,7 @@ use PHPUnit\Framework\TestCase;
 
 trait ConsecutiveParams
 {
+    /** @return list<Callback> */
     public static function withConsecutive(array $firstCallArguments, array ...$consecutiveCallsArguments): iterable
     {
         foreach ($consecutiveCallsArguments as $consecutiveCallArguments) {
