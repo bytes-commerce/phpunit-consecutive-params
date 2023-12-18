@@ -9,17 +9,10 @@ use SEEC\PhpUnit\Helper\ConsecutiveParams;
 
 final class TestableClass
 {
-    public function foo(object $testClass): void
+    public function foo(InputInterface $testClass): void
     {
         $testClass->setSomething(1);
         $testClass->setSomething(2);
-    }
-}
-
-final class InputClass implements InputInterface
-{
-    public function setSomething(int $i): void
-    {
     }
 }
 

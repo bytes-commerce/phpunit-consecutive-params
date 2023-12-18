@@ -12,14 +12,14 @@ use PHPUnit\Framework\TestCase;
 
 trait ConsecutiveParams
 {
-    /** @return list<Callback> */
+    /** @return \Generator<int, Callback> */
     public static function withConsecutive(array $firstCallArguments, array ...$consecutiveCallsArguments): iterable
     {
         foreach ($consecutiveCallsArguments as $consecutiveCallArguments) {
             TestCase::assertSameSize($firstCallArguments, $consecutiveCallArguments, 'Each expected arguments list need to have the same size.');
         }
 
-        $allConsecutiveCallsArguments = [$firstCallArguments, ...$consecutiveCallsArguments];
+        $allConsecutiveCallsArguments = [$firstCallArguments, ...array_values($consecutiveCallsArguments)];
 
         $numberOfArguments = count($firstCallArguments);
         $argumentList = [];
@@ -29,10 +29,11 @@ trait ConsecutiveParams
 
         $mockedMethodCall = 0;
         $callbackCall = 0;
-        foreach ($argumentList as $index => $argument) {
+        foreach ($argumentList as $argument) {
             yield new Callback(
-                static function ($actualArgument) use ($argumentList, &$mockedMethodCall, &$callbackCall, $index, $numberOfArguments): bool {
-                    $expected = $argumentList[$index][$mockedMethodCall] ?? null;
+                static function ($actualArgument) use (&$mockedMethodCall, &$callbackCall, $argument, $numberOfArguments): bool {
+                    /** @var mixed $expected */
+                    $expected = $argument[$mockedMethodCall] ?? null;
 
                     ++$callbackCall;
                     $mockedMethodCall = (int) ($callbackCall / $numberOfArguments);

@@ -19,6 +19,7 @@ jobs:
           - "8.0"
           - "8.1"
           - "8.2"
+          - "8.3"
 
     steps:
       - name: "Checkout"
@@ -51,6 +52,9 @@ jobs:
 
       - name: "PhpStan for tests"
         run: "vendor/bin/phpstan analyse --error-format=checkstyle tests --level=6 | cs2pr"
+
+      - name: "Psalm"
+        run: "vendor/bin/psalm --output-format=github --php-version=${{ matrix.php-version }}"
 
       - name: "PHPUnit Test"
         run: "vendor/bin/phpunit tests/BaseTest.php"
