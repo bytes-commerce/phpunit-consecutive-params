@@ -1,12 +1,12 @@
-FROM php:8.2.7-zts-alpine3.18
+FROM php:8.3
 
 WORKDIR /var/www/html/
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
-RUN apk add --update linux-headers
-RUN apk add -u \
+RUN apt update
+RUN apt install -y \
         nano \
         wget \
         unzip \

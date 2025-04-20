@@ -9,19 +9,19 @@
     "variadic",
     "consecutive params"
   ],
-  "homepage": "https://github.com/nopenopenope/behat-test-runner",
+  "homepage": "https://www.bytes-commerce.de",
   "license": "GPL-3.0-or-later",
   "minimum-stability": "dev",
   "authors": [
     {
       "name": "Maximilian Graf Schimmelmann",
-      "email": "max@schimmelmann.org",
-      "homepage": "https://www.schimmelmann.org",
+      "email": "office@bytes-commerce.de",
+      "homepage": "https://www.bytes-commerce.de",
       "role": "Developer"
     }
   ],
   "require": {
-    "php": "^7.4|^8.0"
+    "php": "^8.0"
   },
   "require-dev": {
     "phpstan/phpstan": "^1.10",
